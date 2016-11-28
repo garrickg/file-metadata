@@ -1,1 +1,1 @@
-FCC Image Search Abstraction Layer API
+FCC File Metadata Microservice API
