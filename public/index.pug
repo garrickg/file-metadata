@@ -20,6 +20,13 @@ html
         | {"size":667193}  
         | //  Returns uploaded file size in bytes
       hr
+      form(method="post",enctype="multipart/form-data",action="/")
+        p
+          input#upl.inputfile(type='file', name='upl')
+          label(for='upl') Choose a file
+        p
+          button.btn.btn-primary(type='submit') Submit
+      hr
       p
         | This was completed as an API project for the FreeCodeCamp Back End Certification, check out the details 
         a(href='https://www.freecodecamp.com/challenges/file-metadata-microservice', target='_blank') here
