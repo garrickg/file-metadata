@@ -2,41 +2,27 @@ doctype html
 html
   head
     meta(charset='UTF-8')
-    title Image Search Abstraction Layer API Project
+    title File Metadata Microservice API Project
     link(rel='stylesheet prefetch', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
     link(rel='stylesheet', href='css/style.css')
   body
     .col-md-8.col-md-offset-2
-      h1 Image Search Abstraction Layer
+      h1 File Metadata Microservice
       hr
       h2 User Stories:
       ul
         li
-          | I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
+          | I can submit a FormData object that includes a file upload.
         li
-          | I can paginate through the responses by adding a ?offset=2 parameter to the URL.
-        li 
-          | I can get a list of the most recently submitted search strings.
-      h2 Example Search Input
+          | When I submit something, I will receive the file size in bytes within the JSON response
+      h2 Example Output
       code
-        a(href='/imagesearch/funny otters') #{url}/imagesearch/funny otters  
-        | //  Search for images of funny otters
-        br
-        a(href='/imagesearch/cool cars?offset=5') #{url}/imagesearch/cool cars?offset=5  
-        | //  Return 5 search results for images of cool cars
-      h2 Example Search Output
-      code
-        | {"url":"https://s-media-cache-ak0.pinimg.com/originals/7b/f4/3a/7bf43a85781e8c301939852b9a70da0d.jpg","snippet":"1000+ images about Cool Cars ...","context":"https://www.pinterest.com/FacePaintLove/cool-cars/"}
-      h2 Example Search History
-      code
-        a(href='/latest') #{url}/latest
-      |  gives the last 10 search queries in the format
-      code
-        | {"query":"cool cars","date":"2016-11-27T22:35:12+00:00"}
+        | {"size":667193}  
+        | //  Returns uploaded file size in bytes
       hr
       p
         | This was completed as an API project for the FreeCodeCamp Back End Certification, check out the details 
-        a(href='https://www.freecodecamp.com/challenges/image-search-abstraction-layer', target='_blank') here
+        a(href='https://www.freecodecamp.com/challenges/file-metadata-microservice', target='_blank') here
         | .
       footer
         a(href='https://github.com/garrickg', target='_blank')
